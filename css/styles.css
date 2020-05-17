@@ -1,0 +1,63 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 1.1em;
+    line-height: 1.2;
+    text-decoration: none;
+}
+body {
+    background: #b4b4b4;
+}
+.nav-list {
+    --text-color: white;
+    --primary-color: #41996f;
+    --secondary-color: #36805d;
+
+    list-style: none;
+    font-family: sans-serif;
+    font-size: 0;
+    }
+
+.navA {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    background-color: var(--primary-color);
+}
+
+.nav-link {
+    display: block;
+    padding: 20px;
+    width: 25vmin;
+    border: solid 1px var(--secondary-color);
+    font-size: max(0.8rem, 4vmin); /* чтобы норм на мобилках*/
+    color: var(--text-color);
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.navA:hover {
+    background: var(--secondary-color);
+    outline: none;
+}
+.nav-listB {
+    position: absolute;
+    left: 0;
+    display: none;
+    z-index: 100;/*    чтобы не прятался на мобилках*/
+}
+.navA:hover > .nav-listB {
+    display: initial;
+}
+
+.nav-listC {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    display: none;
+    z-index: 1000; /*    чтобы не прятался на мобилках*/
+}
+.navA:hover > .nav-listC {
+    display: initial;
+}
